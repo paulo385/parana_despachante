@@ -1,0 +1,86 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+.cxx/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
+
+#########
+
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+coverage/
+generated_plugin_registrant.dart
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/key.properties
+android/app/google-services.json
+*.iml
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.generated/
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+ios/*.xcuserstate
+*.xcworkspace
+
+# Web
+web/.dart_tool/
+web/.packages
+
+# macOS
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Pods/
+macos/.symlinks/
+macos/.generated/
+macos/Runner.xcworkspace/
+macos/Runner.xcodeproj/project.xcworkspace/
+macos/Runner.xcodeproj/xcuserdata/
+macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+macos/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
+
+# Windows
+windows/flutter/ephemeral/
+windows/.generated/
+windows/runner/Runner.exe
+
+# Linux
+linux/flutter/ephemeral/
+linux/.generated/
+
+# IntelliJ related
+.idea/
+*.iml
+
+# VS Code related
+.vscode/
+
+# Others
+*.log
+*.lock
+pubspec.lock
