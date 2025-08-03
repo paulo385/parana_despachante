@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-void main() => runApp(ParanaDespachanteApp());
+void main() => runApp(const ParanaDespachanteApp());
 
 class ParanaDespachanteApp extends StatelessWidget {
   const ParanaDespachanteApp({super.key});
@@ -12,38 +12,40 @@ class ParanaDespachanteApp extends StatelessWidget {
     return MaterialApp(
       title: 'Paraná Despachante',
       theme: ThemeData(
-        primaryColor: Color(0xFF1A681E),
-        scaffoldBackgroundColor: Color(0xFFF1F8E9),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Color(0xFF1A681E),
-          foregroundColor: Colors.white,
+        primaryColor: const Color(0xFF1A681E),
+        scaffoldBackgroundColor: const Color(0xFFF1F8E9),
+        appBarTheme: const AppBarTheme(
+          backgroundColor:  Color(0xFF1A681E),
+          foregroundColor: Color(0xFFFFFFFF),
         ),
-        drawerTheme: DrawerThemeData(
+        drawerTheme: const DrawerThemeData(
           backgroundColor: Color(0xFF1A681E),
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyMedium: TextStyle(color: Colors.black),
         ),
-        iconTheme: IconThemeData(color: Color(0xFFFFCC29)),
-        listTileTheme: ListTileThemeData(
+        iconTheme: const IconThemeData(color: Color(0xFFFFCC29)),
+        listTileTheme: const ListTileThemeData(
           textColor: Colors.black,
           iconColor: Color(0xFFFFCC29),
         ),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Color(0xFF1A681E),
-          primary: Color(0xFF1A681E),
-          secondary: Color(0xFFFFCC29),
-          surface: Color(0xFFF1F8E9),
+          seedColor: const Color(0xFF1A681E),
+          primary: const Color(0xFF1A681E),
+          secondary: const Color(0xFFFFCC29),
+          surface: const Color(0xFFF1F8E9),
           brightness: Brightness.light,
         ),
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class SplashScreen extends StatefulWidget{
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }

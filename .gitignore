@@ -78,7 +78,7 @@ Thumbs.db # Windows specific
 windows/
 macos/
 linux/
-ios/
+# ios/
 web/
 
 .metadata
