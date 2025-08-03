@@ -9,6 +9,53 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart"
+        },
+        {
+            "name": "Simulator Debug?",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            // "deviceId": "70E6AAA3-6C1A-4FFA-B3F5-367572BDED6E",
+            "program": "${workspaceFolder}/lib/main.dart",
+            "args": [
+                "-d",
+                "iPhone 16 Pro Max"
+            ]
+        },
+        {
+            "name": "Unit test coverage",
+            "type": "dart",
+            "request": "launch",
+            "program": "test",
+            "args": [
+                "--coverage"
+            ],
+            "postDebugTask": "Coverage Report",
+        },
+        {
+            "name": "Unit test no coverage",
+            "type": "dart",
+            "request": "launch",
+            "program": "test",
+        },
+        //! Http Adapter Test
+        {
+            "name": "Test - File",
+            "type": "dart",
+            // "type": "flutter",
+            "request": "launch",
+            "program": "${workspaceFolder}/file.dart",
+            "args": [
+                "--coverage"
+            ],
+        },
+        //! Specific test file
+        {
+            "name": "Name test- Run Specific",
+            "type": "dart",
+            // "type": "flutter",
+            "request": "launch",
+            "program": "${workspaceFolder}/test/http_adapter_test.dart"
         }
     ]
     // {
@@ -28,5 +75,5 @@
     //     "type": "dart",
     //     "flutterMode": "release"
     // }
-// ]
+    // ]
 }
