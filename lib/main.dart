@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parana_despachante/file_util.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -15,7 +16,7 @@ class ParanaDespachanteApp extends StatelessWidget {
         primaryColor: const Color(0xFF1A681E),
         scaffoldBackgroundColor: const Color(0xFFF1F8E9),
         appBarTheme: const AppBarTheme(
-          backgroundColor:  Color(0xFF1A681E),
+          backgroundColor: Color(0xFF1A681E),
           foregroundColor: Color(0xFFFFFFFF),
         ),
         drawerTheme: const DrawerThemeData(
@@ -43,12 +44,13 @@ class ParanaDespachanteApp extends StatelessWidget {
   }
 }
 
-class SplashScreen extends StatefulWidget{
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
+
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
@@ -140,6 +142,11 @@ class _MainScreenState extends State<MainScreen> {
 
       case 'Formulários':
         final List<Map<String, String>> formularios = [
+          {
+            "nome": "nome teste.docx",
+            "url":
+                "https://paranadespachante.com.br/shared-files/1341/?TERMO-DE-BAIXA-DE-VEICULO-35ANOS-1.docx&download=1"
+          },
           {
             'nome': 'Anuência de Oficio',
             'url': 'https://drive.google.com/uc?export=download&id=EXEMPLO1',
@@ -248,7 +255,10 @@ class _MainScreenState extends State<MainScreen> {
                       title: Text(item['nome']!),
                       trailing: Icon(Icons.download),
                       onTap: () {
-                        // código para abrir ou baixar item['url']
+                        print("ddd");
+
+                        FileUtil()
+                            .downloadFile(item['url']!, item['nome']!, context);
                       },
                     );
                   },
@@ -276,7 +286,8 @@ class _MainScreenState extends State<MainScreen> {
           'PA': 'https://www.detran.pa.gov.br',
           'PB': 'https://www.detran.pb.gov.br',
           'PE': 'https://www.detran.pe.gov.br',
-          'PI': 'https://www.pi.gov.br/orgao/departamento-estadual-de-transito-detran',
+          'PI':
+              'https://www.pi.gov.br/orgao/departamento-estadual-de-transito-detran',
           'RJ': 'https://www.detran.rj.gov.br',
           'RN': 'http://www.detran.rn.gov.br',
           'RO': 'https://www.detran.ro.gov.br',
@@ -426,8 +437,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-
-
   Widget _paginaLista({required String titulo, required List<String> itens}) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -492,7 +501,6 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-
 
   Widget _drawerItem(String title) {
     return ListTile(
